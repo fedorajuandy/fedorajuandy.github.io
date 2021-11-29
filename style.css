@@ -301,7 +301,7 @@ section .title::after{
 
 /*Skills*/
 .skills .title::after{
-    content: "Which I Have Understand";
+    content: "Which I Have Understood";
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
