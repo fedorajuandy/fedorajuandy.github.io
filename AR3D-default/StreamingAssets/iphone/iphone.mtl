@@ -1,0 +1,74 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v5.4.0)
+
+newmtl button
+Kd 0 0 0
+Ke 0 0 0
+d 1
+Ns 846.400024
+illum 2
+
+newmtl camera-border
+Kd 0.0164484996 0.0164484996 0.0164484996
+Ke 0 0 0
+d 1
+Ns 745.867126
+illum 2
+
+newmtl buttons-incave
+Kd 0.410937995 0.410937995 0.410937995
+Ke 0 0 0
+d 1
+Ns 640
+illum 2
+
+newmtl connector-edge
+Kd 0.702143013 0.702143013 0.702143013
+Ke 0 0 0
+d 1
+Ns 1000
+illum 2
+
+newmtl connector-inner
+Kd 0.16223 0.16223 0.16223
+Ke 0 0 0
+d 1
+Ns 72.6324081
+illum 2
+
+newmtl connector-end
+Kd 0.177057996 0.177057996 0.177057996
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl camera-lens
+Kd 1 1 1
+Ke 0 0 0
+d 1
+Ns 1000
+illum 2
+map_Kd textures/image_0.png
+
+newmtl glass
+Kd 1 1 1
+Ke 0 0 0
+d 1
+Ns 1000
+illum 2
+map_Kd textures/image_1.png
+
+newmtl ear-speaker
+Kd 1 1 1
+Ke 0 0 0
+d 1
+Ns 333.244141
+illum 2
+map_Kd textures/image_2.png
+
+newmtl cover
+Kd 1 1 1
+Ke 0 0 0
+d 1
+illum 1
+
