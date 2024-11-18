@@ -25,7 +25,7 @@ var markers = {
       width: 750,
       height: 563,
       dpi: 150,
-      url: "../../trackables/Alterra_Ticket_1",
+      url: "../../trackables/SotoBandung/SotoBandung.png",
   },
 };
 
