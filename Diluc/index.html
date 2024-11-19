@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AR Demo</title>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        // We're going to register a custom event listener through a-frame that will fire
+        // whenever a marker has entered the camera view and is found through ar.js
+        AFRAME.registerComponent('registerevents', {
+            init: function() {
+                var marker = this.el;
+
+                // Element emits events when found and lost
+                marker.setAttribute('emitevents', 'true');
+
+                marker.addEventListener('markerFound', function() {
+                    // Alright, a marker has been found. Let's get the video element
+                    var vid = document.getElementById('waterVideo');
+
+                    // Make sure that the video a-frame object is visible
+                    document.querySelector('#water').setAttribute('visible', true);
+
+                    // Reset the video to the beginning and play it through
+                    vid.currentTime = 0;
+                    vid.play();
+
+                    // Once the video has completed, we're going to hide the a-video element
+                    // which will display the a-image element with the watch behind it
+                    vid.addEventListener('ended', function(e) {
+                        document.querySelector('#water').setAttribute('visible', false);
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body style="margin:0; overflow:hidden;">
+    <a-scene embedded arjs="" artoolkit="">
+        <a-assets timeout="10000">
+            <img id="watchImage" src="/img/Hiro.png">
+            <video id="waterVideo" loop="false" autoplay="false" src="/img/maximum.mp4" preload="auto"></video>
+        </a-assets>
+        <a-marker preset="hiro" registerevents>
+            <a-image id="watch" src="#watchImage" height="2" width="1" position="0 1 0"></a-image>
+            <a-video id="water" src="#waterVideo" height="2" width="1" position="0 1 0" autoplay="false"></a-video>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
