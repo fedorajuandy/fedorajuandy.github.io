@@ -40,11 +40,11 @@
 <body style="margin:0; overflow:hidden;">
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" artoolkit="">
         <a-assets timeout="10000">
-            <img id="watchImage" src="/img/DilucCard.jpeg">
+            <img id="watchImage" src="http://fedorajuandy.github.io/Diluc/img/DilucCard.jpeg">
             <!-- <video id="waterVideo" loop="false" autoplay="false" src="/img/maximum.mp4" preload="auto"></video> -->
         </a-assets>
         <a-marker preset="hiro" registerevents>
-            <a-image id="watch" src="#watchImage" height="1" width="1" position="0 1 1"></a-image>
+            <a-image id="watch" src="#watchImage" height="1" width="1" position="0 0 0"></a-image>
             <!-- <a-video id="water" src="#waterVideo" height="2" width="1" position="0 1 0" autoplay="false"></a-video> -->
         </a-marker>
         <a-entity camera></a-entity>
