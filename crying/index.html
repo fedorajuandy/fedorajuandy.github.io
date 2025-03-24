@@ -18,7 +18,7 @@
           <!-- Stationary Box -->
           <a-box
             id="stationary-box"
-            position="0 0 -5"
+            position="0 0 0"
             rotation="0 0 0"
             color="#4CC3D9"
           ></a-box>
@@ -49,7 +49,7 @@
 
         // Apply the inverse transformations to the box
         this.box.object3D.position.copy(inversePosition);
-        this.box.object3D.rotation.copy(inverseRotation);
+        // this.box.object3D.rotation.copy(inverseRotation);
       }
     });
 
