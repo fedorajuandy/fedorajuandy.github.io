@@ -41,11 +41,18 @@
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" artoolkit="">
         <a-assets timeout="10000">
             <!-- <img id="watchImage" src="http://fedorajuandy.github.io/Diluc/img/DilucCard.jpeg"> -->
-            <video id="waterVideo" loop="false" autoplay="false" src="http://fedorajuandy.github.io/Diluc/img/maximum.mp4" preload="auto"></video>
+            <!-- <video id="waterVideo" loop="false" autoplay="false" src="http://fedorajuandy.github.io/Diluc/img/maximum.mp4" preload="auto"></video> -->
+            <a-asset-item id="model" src="http://fedorajuandy.github.io/Diluc/model3d/tree/AlanTree.fbx"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro" registerevents>
             <!-- <a-image id="watch" src="#watchImage" height="1" width="1" position="0 0 0"></a-image> -->
-            <a-video id="water" src="#waterVideo" height="2" width="1" position="0 1 0" autoplay="false"></a-video>
+            <!-- <a-video id="water" src="#waterVideo" height="2" width="1" position="0 1 0" autoplay="false"></a-video> -->
+            <a-entity
+                gltf-model="#model"
+                scale="0.5 0.5 0.5"
+                position="0 0 0"
+                rotation="0 0 0">
+            </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
