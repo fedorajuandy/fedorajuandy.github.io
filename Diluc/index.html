@@ -43,7 +43,7 @@
         <a-assets timeout="60000">
             <img id="watchImage" src="https://fedorajuandy.github.io/Diluc/img/DilucCard.jpeg">
             <!-- <video id="waterVideo" loop="false" autoplay="false" src="https://fedorajuandy.github.io/Diluc/img/maximum.mp4" preload="auto"></video> -->
-            <a-asset-item id="model" src="https://fedorajuandy.github.io/Diluc/model3d/tree/AlanTree.fbx"></a-asset-item>
+            <a-asset-item id="model" src="https://fedorajuandy.github.io/Diluc/model3d/car/BMW850.obj"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro" registerevents>
             <a-image id="watch" src="#watchImage" height="1" width="1" position="0 0 0"></a-image>
@@ -59,7 +59,7 @@
             ply-model="src: url(/path/to/nameOfFile.ply);"
             -->
             <a-entity
-                fbx-model="#model"
+                fbx-model="src: url(/Diluc/model3d/tree/AlanTree.fbx);"
                 scale="0.5 0.5 0.5"
                 position="0 0 0"
                 rotation="0 0 0">
