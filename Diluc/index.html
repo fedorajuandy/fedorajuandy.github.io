@@ -43,15 +43,15 @@
         <a-assets timeout="60000">
             <img id="watchImage" src="https://fedorajuandy.github.io/Diluc/img/DilucCard.jpeg">
             <!-- <video id="waterVideo" loop="false" autoplay="false" src="https://fedorajuandy.github.io/Diluc/img/maximum.mp4" preload="auto"></video> -->
-            <a-asset-item id="model" src="https://fedorajuandy.github.io/Diluc/model3d/tree/AlanTree.fbx"></a-asset-item>
+            <a-asset-item id="model" src="https://fedorajuandy.github.io/Diluc/model3d/wolf/Wolf-Blender-2.82a.gltf"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro" registerevents>
             <a-image id="watch" src="#watchImage" height="1" width="1" position="0 0 0"></a-image>
             <!-- <a-video id="water" src="#waterVideo" height="2" width="1" position="0 1 0" autoplay="false"></a-video> -->
             <!--
-            fbx-model="#model"
-            obj-model="obj: url(/path/to/nameOfFile.obj); mtl: url(/path/to/nameOfFile.mtl)"
-            fbx-model="src: url(/path/to/nameOfFile.json);"
+            obj-model="obj: url(https://fedorajuandy.github.io/Diluc/model3d/car/BMW850.obj); mtl: url(https://fedorajuandy.github.io/Diluc/model3d/car/BMW850.mtl);"
+            fbx-model="https://fedorajuandy.github.io/Diluc/model3d/tree/AlanTree.fbx"
+
             collada-model="url(/path/to/nameOfFile.dae)"
             gltf-model="url(/path/to/nameOfFile.gltf)"
             gltf-model-next="src: url(/path/to/nameOfFile.gltf);"
@@ -59,7 +59,7 @@
             ply-model="src: url(/path/to/nameOfFile.ply);"
             -->
             <a-entity
-                obj-model="obj: url(https://fedorajuandy.github.io/Diluc/model3d/car/BMW850.obj); mtl: url(https://fedorajuandy.github.io/Diluc/model3d/car/BMW850.mtl);"
+                gltf-model="#model"
                 scale="0.01 0.01 0.01"
                 position="0 0 0"
                 rotation="0 0 0">
