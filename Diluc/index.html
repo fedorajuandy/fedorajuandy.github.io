@@ -5,6 +5,7 @@
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script>
         // We're going to register a custom event listener through a-frame that will fire
@@ -47,8 +48,17 @@
         <a-marker preset="hiro" registerevents>
             <!-- <a-image id="watch" src="#watchImage" height="1" width="1" position="0 0 0"></a-image> -->
             <!-- <a-video id="water" src="#waterVideo" height="2" width="1" position="0 1 0" autoplay="false"></a-video> -->
+            <!--
+            obj-model="obj: url(/path/to/nameOfFile.obj); mtl: url(/path/to/nameOfFile.mtl)"
+            fbx-model="src: url(/path/to/nameOfFile.json);"
+            collada-model="url(/path/to/nameOfFile.dae)"
+            gltf-model="url(/path/to/nameOfFile.gltf)"
+            gltf-model-next="src: url(/path/to/nameOfFile.gltf);"
+            json-model="src: url(/path/to/nameOfFile.json);"
+            ply-model="src: url(/path/to/nameOfFile.ply);"
+            -->
             <a-entity
-                gltf-model="#model"
+                fbx-model="#model"
                 scale="0.5 0.5 0.5"
                 position="0 0 0"
                 rotation="0 0 0">
